@@ -1,0 +1,963 @@
+body{
+    margin: auto;
+    padding: auto;
+}
+
+.row{
+    padding: auto;
+    margin: auto;
+}
+
+
+/*header------------------------------------------------------------------------------------------*/
+.header{
+    background-color: rgb(22, 63, 67);
+    color: blanchedalmond;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+/*logo*/
+.header img{
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+        .header .row{
+            margin: 0;
+            padding: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header img{
+        width: 200px;
+        padding-top: 50px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+        .header_nav{
+            visibility: collapse;
+            margin-bottom: 10px;
+            padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+       .lancamentos-area .main-lancamentos{
+            width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+        .lancamentos-area .titulos-lancamento{
+            font-size: 40px;
+    }
+}
+
+/*area do header*/
+.header_area{
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*barra de navegação do header*/
+.header_nav{
+    background-color: none;
+    padding: 30px;
+    text-align: right;
+    width: 100%;
+}
+
+.caixa-pesquisa{
+    padding-left: 20px;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .caixa-pesquisa{
+        display: block;
+        align-content: center;
+        text-align: center;
+        visibility: hidden;
+    }
+}
+
+
+
+/*links do nav do header*/
+.header_nav a{
+    color: rgb(196, 176, 146);
+    margin-right: 0px;
+}
+
+
+/*link com mouse em cima*/
+.header_nav a:hover{
+    color: rgb(131, 103, 58);
+    background-color: rgb(207, 178, 135);
+    transition: background .4s;
+}
+
+
+/*link ativo*/
+.active{
+    background-color: rgb(238, 219, 192) !important;
+    color: rgb(105, 81, 41) !important;
+}
+
+
+.botao-procurar{
+    width: 50px;
+    text-align: center;
+}
+
+
+.header_pesquisa .pesquisa{
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    input .pesquisa, .caixa-pesquisa{
+        width: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*LANÇAMENTOS*/
+.main{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(16, 48, 51);
+    margin: 0;
+    padding: 0;
+}
+
+
+.area-lancamentos{
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 60px;
+}
+
+/*Lançamentos com parágrafos*/
+.main .conteudo-lancamentos p, .elenco, .avaliação{
+    color: rgb(238, 219, 192);
+    font-size: 13px;
+}
+
+/*Conteudo de lançamentos dentro do main*/
+.main-lancamentos {
+    background-color: rgb(16, 48, 51);
+    margin-bottom: 50px;
+}
+
+/*Main dos lançamentos para cor ficar dentro do carousel*/
+.main-lancamentos2{
+    background-color: rgb(16, 48, 51) !important;
+}
+
+
+/*Titulo pricnipal da aba lançamentos*/
+.titulos{
+    text-align: center;
+    font-size: 55px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    color: rgb(238, 219, 192);
+}
+
+.titulos-lancamento{
+    text-align: center;
+    font-size: 55px;
+    margin-top: 30px;
+    color: rgb(238, 219, 192);
+}
+
+
+/*video do ifrme utilizado*/
+.video-lancamentos{
+    background-color: rgb(16, 48, 51) !important;
+    margin-bottom: 20px;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Conteudo do lançamento*/
+.conteudo-lancamentos{
+    background-color: rgb(16, 48, 51) !important;
+    color: rgb(238, 219, 192);
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+
+/*Conteudo do elenco*/
+.elenco{
+    margin-bottom: 15px;
+}
+
+
+/*Lista de elenco do conteudo de elenco*/
+.lista-elenco {
+    display: inline;
+    padding: 0px !important;
+    margin-bottom: 50px;
+    color: rgb(238, 219, 192);
+
+}
+
+
+/*Objetos li dentro da lista de elenco*/
+.lista-elenco li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*DESTAQUES =-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*Mudança de cor do background do destaques*/
+.carousel .slide{
+    background-color: rgb(16, 48, 51) !important;
+}
+
+
+/*Area de destaques*/
+.destaques{
+    background-color: rgb(238, 219, 192) !important;
+    color: rgb(22, 63, 67);
+}
+
+
+/*Titulo do destaque*/
+.destaques .titulo-destaques{
+    color: rgb(22, 63, 67);
+    text-align: center;
+    font-size: 55px;
+    margin-top: 60px;
+    width: 100%;
+}
+
+
+/*Menu do destaques posição*/
+.destaques .dp-menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    font-size: 100%;
+    width: 300px;
+    height: 10%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .destaques .dp-menu{
+        justify-content: center;
+        align-items: center;
+        padding-left: 40%;
+        margin-top: 0%;
+        text-align: center;
+        font-size: 30px;
+        background-color: none;
+    }
+}
+
+
+/*Menu de categorias lista não ordenada*/
+.dp-menu ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+/*Menu de categorias lista não ordenada*/
+.dp-menu ul{
+    background-color: rgb(207, 178, 135);
+    width: 100%;
+    font-weight: 600; 
+}
+
+@media screen and (max-width: 1000px) {
+    .dp-menu ul{
+        background-color: none;
+        width: 100%;
+        font-weight: 600; 
+    }
+}
+
+
+
+/*itens do menu de categorias lista não ordenada*/
+.dp-menu ul li{
+    display: inline;
+    position: relative;
+    width: 300px;
+    margin: 0px;
+}
+
+
+/*links do Menu de categorias lista não ordenada*/
+.dp-menu ul li a{
+    color: rgb(131, 103, 58);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: background .4s;
+    width: 300px;
+    margin: 0px;
+}
+
+
+
+/*link do menu de categorias da lista não ordenada com o mouse em cima*/
+.dp-menu ul li a:hover{
+    background-color: blanchedalmond;
+    color: rgb(131, 103, 58);
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+/*Sub Menu categorias*/
+.dp-menu ul ul{
+    display: none;
+    position: absolute;
+}
+
+
+/*links do submenu quando o mouse passar em cima*/
+.dp-menu ul li:hover ul{
+    display: block;
+}
+
+
+/*Setando a aparição dos items do sub menu do categorias*/
+.dp-menu ul ul li{
+    display: inline-block;
+    font-weight: 100;
+}
+
+
+/*Destaques com cartazes (Fundo)*/
+.destaques2{
+    background-color: rgb(238, 219, 192);
+    margin: 0;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .destaques2{
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+
+/*Cartazes do destaque*/
+.destaques2 img{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+    .destaques2 .cartaz{
+        padding-bottom: 30px;
+    }
+}
+
+
+
+/*botão ver mais em destaques*/
+.destaques3{
+    background-color: rgb(238, 219, 192);
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .destaques3{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.destaques3 .botao-ver {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/*Alterações do botão ver mais destaques*/
+.destaques3 .botao-ver button{
+    color: rgb(238, 219, 192) !important;
+    background-color: rgb(22, 63, 67);
+    width: 250px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*Area de avaliação titulo*/
+.destaques4{
+    background-color: rgb(238, 219, 192) !important;
+    color: rgb(22, 63, 67);
+}
+
+
+/*Titulo do avaliação*/
+.destaques4 .titulo-avaliacao{
+    color: rgb(238, 219, 192);
+    text-align: center;
+    font-size: 55px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+/*Titulo do destaque 4 - avaliações*/
+.destaques4 .titulos{
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+/*Avaliação texto e fotos*/
+.destaques5{
+    background-color: rgb(238, 219, 192);
+    display: flex;
+    justify-content: center;
+}
+
+/*todo conteúdo dentro de avaliações*/
+.avaliacao{
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: rgb(148, 128, 95) ;
+}
+
+
+/*Foto da pessoa avaliadora nos destaques*/
+.foto-avaliador{
+    width: 100px;
+    border-radius: 100%;
+}
+
+/*Nome da pessoa da avaliação*/
+.avaliacao h4{
+    display: inline-block;
+    margin-left: 10px;
+    color: rgb(238, 219, 192);
+    margin-top: 5px;
+    font-size: 25px;
+}
+
+/*paragrafos da avaliação dos usuários*/
+.avaliacao-conteudo p{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin: 5px 25px;
+    color: rgb(220, 200, 150);
+}
+
+@media screen and (max-width: 900px) {
+    .avaliacao-conteudo p{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
+}
+
+/*estrlas das avaliações*/
+.estrelas-avaliacao img{
+    display: inline;
+    width: 20px;
+}
+
+/*caixa das estrelas da avaliação*/
+.estrelas-avaliacao{
+    margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .estrelas-avaliacao{
+        margin-bottom: 50px;
+    }
+}
+
+/*caixa principal da avaliação*/
+.detaques-main{
+    background-color: rgb(238, 219, 192);
+}
+
+/*caixa principal main-avaliacoes*/
+.main-avaliacoes{
+    padding-top: 20px;
+    padding-bottom: 80px;
+    background-color: rgb(148, 128, 95);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MAIN DO ENTREVISTA E MAKING OF*/
+.entrevista-main{
+    text-align: center;
+    padding: 20px;
+}
+
+/*caixa de videos da entrevista*/
+.videos-entrevistas .video{
+    margin: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+    .videos-entrevistas .video{
+        padding: 50px;
+        height: 100%;
+    }
+}
+
+/*iframes das entrevistas*/
+.iframe-entrevista{
+    padding-bottom: 0px;
+    margin: 0px 10px;
+}
+
+/*titulo do video das entrevistas filmes*/
+.titulo-video-entrevista .titulos{
+    font-size: 30px;
+    margin: 0px 10px;
+    padding: 0px;
+    text-align: left; 
+}
+
+/*Paragrafos dos textos das entrevistas*/
+.video .texto-entrevistas p{
+    text-align: left;
+    margin: 5px 10px;
+    color: rgb(220, 200, 150);
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+    .video .texto-entrevistas p{
+        font-size: 15px;
+    }
+}
+
+/*Links dos textos das entrevistas*/
+.videos-entrevistas a{
+    color: rgb(220, 200, 150);
+    margin: 5px 10px;
+}
+
+/*Links dos textos das entrevistas com mouse em cima*/
+.videos-entrevistas a:hover{
+    color: rgb(172, 154, 109);
+    margin: 5px 10px;
+}
+
+/*Botão do ver mais entrevistas*/
+.entrevista-main .botao-entrevistas .botao-ver button{
+    color: rgb(22, 63, 67) !important;
+    background-color: rgb(220, 200, 150);
+    width: 250px;
+    height: 45px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.entrevista-main .botao-entrevistas .botao-ver{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+.novidades-main{
+    background-color: rgb(207, 178, 135);
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+        .novidades-main{
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+    }
+}
+
+
+
+
+/*novidades main*/
+.novidades-main p{
+    text-align: left;
+    margin: 5px 10px;
+    color: rgb(22, 63, 67);
+    font-size: 15px;
+    font-weight: 900px;
+}
+
+/*titulos do novidades*/
+.titulos-novidades .titulos{
+    text-align: left;
+    color: rgb(22, 63, 67);
+    font-weight: bolder;
+}
+
+/*titulo 1 novidades*/
+.titulos-novidades .titulo1 .titulos{
+    margin-left: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*titulo 2 sobre*/
+.titulos-novidades .titulo2 .titulos{
+    margin-bottom: 10px;
+}
+
+
+/*TExto do sobre*/
+.conteudo-lateral .texto, ul{
+    text-align: left;
+    margin-right: 10px;
+    color: rgb(22, 63, 67);
+    font-size: 15px;
+}
+
+
+.bold{
+    font-weight: 900;
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+.conteudo-lateral .titulos{
+    font-size: 30px;
+    color: rgb(22, 63, 67);
+}
+
+
+.div-redes{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.conteudo-redes ul{
+    list-style: none;
+    width: 50px;
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+.conteudo-redes ul li{
+    list-style: none;
+    width: 50px;
+    display: inline;
+    margin-right: 5px;
+    padding: 0px;
+}
+
+.conteudo-redes ul li img{
+    list-style: none;
+    width: 10%;
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+    .div-redes{
+        text-align: left;
+        justify-content: left;
+    }
+}
+
+.conteudo-novidades{
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .conteudo-novidades{
+        display: block;
+        justify-content: left;
+        align-items: center;
+    }
+}
+
+.elemento-novidade-col{
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.conteudo-novidades h4{
+    font-size: 26px;
+    margin: 10px 10px 0px 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .novidades-main, .conteudo-novidades, .titulos{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: block;
+    }
+}
+
+.novidades .conteudo-novidades .imagem img{
+    display: inline;
+    text-align: left;
+    width: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+    .novidades .conteudo-novidades .imagem img{
+        width: 100%;
+    }
+}
+
+
+.novidades .texto-novidades .texto{
+    text-align: left;
+    width: 90%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+    .novidades .texto-novidades{
+        width:100%;
+    }
+}
+
+
+/*Links dos textos das entrevistas*/
+.conteudo-novidades a{
+    color: rgb(22, 63, 67);
+    margin: 5px 10px;
+}
+
+/*Links dos textos das entrevistas com mouse em cima*/
+.conteudo-novidades a:hover{
+    color: rgb(172, 154, 109);
+    margin: 5px 10px;
+}
+/*FIM MAIN ----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Rodapé-------------------------------------------------------------------------------------------*/
+footer{
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+.footer{
+    background-color: rgb(22, 63, 67);
+    color: rgb(238, 219, 192);
+    align-items: center;
+    margin: 0px;
+    padding: 50px;
+}
+
+.footer .area-logo{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.footer .area-copyright{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer .area-logo .logo img{
+    width:  200px;
+}
