@@ -36,6 +36,28 @@ header .div-logo img {
     width: 100%;
 }
 
+/*LINKS HEADER*/
+header .nav-link{
+    
+    list-style: none;
+}
+
+
+/*link com mouse em cima*/
+.header a:hover{
+    color: rgb(131, 103, 58);
+    background-color: rgb(207, 178, 135);
+    transition: background .4s;
+}
+
+
+/*link ativo*/
+.active{
+    background-color: rgb(238, 219, 192) !important;
+    color: rgb(105, 81, 41) !important;
+}
+
+
 /*BARRA DE PESQUISA*/
 .search {
     background-color: var(--amareloPrimario);
