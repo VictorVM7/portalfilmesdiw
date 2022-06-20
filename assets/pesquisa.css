@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
-@import url('assets/css');
 
 * {
     box-sizing: border-box;
@@ -75,7 +74,7 @@ main {
     justify-content: center;
 }
 
-#movie-card {
+.movie-card {
     width: 300px;
     margin: 2rem;
     border-radius: 5px;
@@ -85,11 +84,11 @@ main {
     overflow: hidden;
 }
 
-#movie-card img {
+.movie-card img {
     width: 100%;
 }
 
-#movie-card .informacoes-filme {
+.movie-card .informacoes-filme {
     color: var(--amareloPrimario);
     padding: 0.5rem 1rem;
     display: flex;
@@ -98,14 +97,14 @@ main {
     font-family: 'Montserrat', 'sans-serif';
 }
 
-#movie-card .informacoes-filme span {
+.movie-card .informacoes-filme span {
     background-color: var(--verdePrincipal);
     padding: 0.25rem 0.5rem;
     border-radius: 2px;
     font-weight: bold;
 }
 
-#movie-card .review-filme {
+.movie-card .review-filme {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -122,13 +121,13 @@ main {
     transition: transform 0.4s ease-in;
 }
 
-#movie-card .review-filme .div-btn-vermais{
+.movie-card .review-filme .div-btn-vermais{
     width: 100%;
     display: flex;
     justify-content: right;
 }
 
-#movie-card .review-filme #btn-vermais {
+.movie-card .review-filme #btn-vermais {
     background-color: var(--amareloPrimario);
     color: var(--verdePrincipal);
     border: none;
@@ -136,6 +135,6 @@ main {
     margin-top: 0.5rem;
 }
 
-#movie-card:hover .review-filme {
+.movie-card:hover .review-filme {
     transform: translateY(0);
 }
