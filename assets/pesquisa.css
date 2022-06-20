@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+@import url('assets/css');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --verdePrincipal: rgb(22, 63, 67);
+    --verdeSecundario: rgb(16, 48, 51);
+    --amareloPrimario: rgb(238, 219, 192);
+    --amareloSecundario: rgb(207, 178, 135);
+}
+
+.body {
+    background-color: var(--amareloPrimario);
+    margin: 0;
+}
+
+/*CABECACLHO*/
+header {
+    background-color: var(--verdePrincipal);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*LOGO*/
+header .div-logo {
+    display: flex;
+    justify-content: left;
+    width: 200px;
+}
+
+header .div-logo img {
+    width: 100%;
+}
+
+/*BARRA DE PESQUISA*/
+.search {
+    background-color: var(--amareloPrimario);
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+    color: var(--verdeSecundario);
+    font-family: inherit;
+    font-weight: 600;
+    border: none;
+}
+
+.search:focus {
+    outline: 0;
+    background-color: var(--amareloSecundario);
+}
+
+.search::placeholder {
+    color: gray;
+}
+
+header #form .botao-procurar {
+    background-color: var(--amareloPrimario);
+    border: none;
+    width: inherit;
+    padding: 3px 10px;
+}
+
+header #form img {
+    width: 20px;
+}
+
+/*MAIN*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#movie-card {
+    width: 300px;
+    margin: 2rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px;
+    background-color: var(--verdeSecundario);
+    position: relative;
+    overflow: hidden;
+}
+
+#movie-card img {
+    width: 100%;
+}
+
+#movie-card .informacoes-filme {
+    color: var(--amareloPrimario);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+#movie-card .informacoes-filme span {
+    background-color: var(--verdePrincipal);
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+#movie-card .review-filme {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--verdePrincipal);
+    color: var(--amareloSecundario);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.4s ease-in;
+}
+
+#movie-card .review-filme .div-btn-vermais{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+#movie-card .review-filme #btn-vermais {
+    background-color: var(--amareloPrimario);
+    color: var(--verdePrincipal);
+    border: none;
+    padding: 0.25rem 0.50rem;
+    margin-top: 0.5rem;
+}
+
+#movie-card:hover .review-filme {
+    transform: translateY(0);
+}
