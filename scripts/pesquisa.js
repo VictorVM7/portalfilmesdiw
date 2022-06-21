@@ -6,13 +6,12 @@ const POPULAR_API = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const SEARCH_URL = BASE_URL + '/search/movie?' + API_KEY + ptBR;
 
-
-/*Ao carregar a página*/
-window.onload = () => {
-    var main = document.getElementById('main');
-    var form = document.getElementById('form');
-    var search = document.getElementById('search');
+onload = () => {
+    const main = document.getElementById('main');
+    const form = document.getElementById('form');
+    const search = document.getElementById('search');
 }
+
 
 getFilmes(POPULAR_API);
 
@@ -50,13 +49,22 @@ function mostrarFilme(dados) {
     })
 }
 
-form.addEvenetListener('submit', (e) => {
-    e.preventDefault();
-    const itemProcurado = search.value;
+onload = () => {
+    const main = document.getElementById('main');
+    const form = document.getElementById('form');
+    const search = document.getElementById('search');
+    const botao = document.getElementById('botaoProcurar');
 
-    if(itemProcurado){
-        getFilmes(SEARCH_URL + '&query=' + itemProcurado);
-    } else {
-        getFilmes(POPULAR_API)
-    }
-})
+    form.addEventListener('submit', (evento) => {
+        evento.preventDefault();
+        const itemProcurado = search.value;
+        const FILME_PROCURADO = SEARCH_URL + '&query=' + itemProcurado;
+    
+        if(FILME_PROCURADO){
+            getFilmes(FILME_PROCURADO);
+        } 
+        else {
+            getFilmes(POPULAR_API);
+        }
+    })
+}

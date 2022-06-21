@@ -12,88 +12,37 @@
 </head>
 
 <body class="body">
-    <header>
-        <!--Logo-->
-        <div class="div-logo">
-            <img src="assets/img/logo.png">
-        </div>
-        
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
 
-        <!--Search bar-->
-        <form id="form" type="submit">
-            <input class="search" type="text" placeholder="Procurar filme..." aria-label="Search">
-            <button class="botao-procurar" type="submit"><img src="assets/img/icone-lupa.png" alt=""></button>
-        </form>
+    <!--CABECALHO-->
+    <header>
+        <div class="div-header">
+            <!--LOGO-->
+            <div class="div-logo">
+                <a href="index.html"><img src="assets/img/logo.png"></a>
+            </div>
+            
+            <!--NAV DO HEADER-->
+            <div class="div-nav">
+                <ul class="ul-nav">
+                    <li class="li-link">
+                        <a class="link" href="index.html">Home</a>
+                    </li>
+                    <li class="li-link active">
+                        <a class="link" href="pesquisa.html">Pesquisa</a>
+                    </li>
+                </ul>   
+
+                <!--SEARCH BAR DO HEADER-->
+                <form id="form">
+                    <input id="search" class="search" type="text" placeholder="Procurar filme..." aria-label="Search">
+                    <button id="botaoProcurar" class="botaoProcurar" type="submit"><img src="assets/img/icone-lupa.png" alt=""></button>
+                </form>
+            </div>
+        </div>
     </header>
 
-    <main id="main">
-        <!--Movie card-->
-        <div class="movie-card">
-            <img src="assets/img/cartaz1.jpg" alt="imagem">
-
-            <div class="informacoes-filme">
-                <h3>Titulo</h3>
-                <span class="grade">10</span>
-            </div>
-            <div class="review-filme">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum fugiat quas commodi atque tempora.
-                <div class="div-btn-vermais">
-                    <button id="btn-vermais" type="button">Ver Mais</button>
-                </div> 
-            </div>   
-        </div>
-        <!--Movie card-->
-        <div id="movie-card">
-            <img src="assets/img/cartaz1.jpg" alt="imagem">
-
-            <div class="informacoes-filme">
-                <h3>Titulo</h3>
-                <span class="grade">10</span>
-            </div>
-            <div class="review-filme">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum fugiat quas commodi atque tempora.
-                <div class="div-btn-vermais">
-                    <button id="btn-vermais" type="button">Ver Mais</button>
-                </div> 
-            </div>
-            
-        </div>
-        <!--Movie card-->
-        <div id="movie-card">
-            <img src="assets/img/cartaz1.jpg" alt="imagem">
-
-            <div class="informacoes-filme">
-                <h3>Titulo</h3>
-                <span class="grade">10</span>
-            </div>
-            <div class="review-filme">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum fugiat quas commodi atque tempora.
-                <div class="div-btn-vermais">
-                    <button id="btn-vermais" type="button">Ver Mais</button>
-                </div> 
-            </div>
-            
-        </div>
-        <!--Movie card-->
-        <div id="movie-card">
-            <img src="assets/img/cartaz1.jpg" alt="imagem">
-
-            <div class="informacoes-filme">
-                <h3>Titulo</h3>
-                <span class="grade">10</span>
-            </div>
-            <div class="review-filme">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum fugiat quas commodi atque tempora.
-                <div class="div-btn-vermais">
-                    <button id="btn-vermais" type="button">Ver Mais</button>
-                </div> 
-            </div>
-            
-        </div>
-    </main>
+    <!--MAIN DEFINIDA PELO JS (scripts/pesquisa.js)-->
+    <main id="main"></main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
