@@ -35,6 +35,52 @@ header .div-header {
     width: 100%;
 }
 
+@media screen and (max-width: 660px) {
+    header *{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header .div-header .div-nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    /*LOGO*/
+    header .div-logo {
+        display: flex;
+        justify-content: center;
+        width: 200px;
+    }
+
+    /*LISTA NÃO ORDENADA DO NAV HEADER*/
+    header .div-nav .ul-nav {
+        display: flex;
+        justify-content: center;
+        padding: 0.25rem;
+        padding-right: 2rem;
+    }
+    /*BARRA DE PESQUISA*/
+    #search,
+    header #form .botaoProcurar,
+    form{
+        padding-top: 2.5rem;
+        height: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /*BARRA DE PESQUISA*/
+    #search,
+    header #form .botaoProcurar,
+    form{
+        padding-top: 1rem;
+        height: 2rem;
+    }
+}
+
 /*DIV NAV (BARRA E LINKS)*/
 header .div-header .div-nav {
     display: flex;
@@ -193,18 +239,201 @@ main {
     width: 100%;
     display: flex;
     justify-content: right;
+    border: none;
+}
+
+/*DIV BOTÃO VER MAIS DENTRO DO REVIEW DO CARTÃO DE FILMES*/
+.movie-card .review-filme .div-btn-vermais a {
+    color: var(--amareloTerciario);
+    text-decoration: none;
 }
 
 /*BOTAO VER MAIS DENTRO DO REVIEW DE FILMES*/
-.movie-card .review-filme #btn-vermais {
+.movie-card .review-filme .btn-vermais {
     background-color: var(--amareloPrimario);
     color: var(--verdePrincipal);
     border: none;
     padding: 0.25rem 0.50rem;
     margin-top: 0.5rem;
+    border: none;
 }
 
 /*REVIEW DE FILMES QUANDO O MOUSE PASSA EM CIMA (animaçâo de aparecer)*/
 .movie-card:hover .review-filme {
     transform: translateY(0);
 }
+
+footer {
+    background-color: rgb(22, 63, 67);
+    color: rgb(238, 219, 192);
+}
+
+footer .div-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+footer .div-footer .div-copyright {
+    padding-top: 1.5rem;
+    text-align: left;
+}
+
+footer .div-footer .div-logo{
+    width: 20rem;
+}
+
+footer .div-footer .div-logo img{
+    width: 100%;
+}
+
+@media screen and (max-width: 1075px) {
+    footer .div-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+    footer .div-footer .div-copyright {
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+    
+    footer .div-footer .div-logo{
+        display: flex;
+        justify-content: center;
+        width: 10rem;
+    }
+    
+    footer .div-footer .div-logo img{
+        width: 100%;
+    }
+}
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+
+  .overlay-content .div-overlay{
+    display: flex;
+    justify-content: center;
+    color: var(--amareloPrimario);
+    padding: 2rem;
+  }
+
+  .overlay-content .div-overlay .div-imagem {
+    width: 600px;
+  }
+
+  .overlay-content .div-overlay .div-imagem img{
+    width: 100%;
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay-content .div-overlay .div-imagem {
+        width: 25rem;
+    }
+}
+
+
+.overlay-content .div-overlay .conteudo{
+    width: 50%;
+    padding: 2rem;
+    display: block;
+    text-align: left;
+  }
+
+  .overlay-content .div-overlay .conteudo h1{
+    font-size: 60px;
+    color: brown;
+  }
+
+  .overlay-content .div-overlay .conteudo .review-filme{
+    padding: 1rem 0rem;
+  }
+
+@media screen and (max-width: 850px) {
+    .overlay-content .div-overlay{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        color: var(--amareloPrimario);
+        padding: 1rem;
+      }
+    
+      .overlay-content .div-overlay .div-imagem {
+        width: 500px;
+      }
+
+      .overlay-content .div-overlay .conteudo{
+        width: 500px;
+        padding: 0rem;
+        display: block;
+        text-align: left;
+        font-size: 20px;
+      }
+    
+      .overlay-content .div-overlay .conteudo h1{
+        font-size: 40px;
+        color: brown;
+      }
+    
+      .overlay-content .div-overlay .conteudo .review-filme{
+        padding: 1rem 0rem;
+      }
+}
+
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }

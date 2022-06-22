@@ -1,112 +1,87 @@
-body{
-    margin: auto;
-    padding: auto;
-}
-
-.row{
-    padding: auto;
-    margin: auto;
-}
-
-
-/*header------------------------------------------------------------------------------------------*/
-.header{
-    background-color: rgb(22, 63, 67);
-    color: blanchedalmond;
-    width: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.header{
-    padding-left: 20%;
-    padding-right: 20%;
+/*header------------------------------------------------------------------------------------------*/
+header {
+    padding: 2rem;
+    justify-content: space-between;
+    background-color: rgb(22, 63, 67);
+    color: blanchedalmond;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/*logo*/
-.header img{
+/*LOGO*/
+header .header_area {
+    width: 250px;
+}
+
+header .header_area img {
     width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-        .header .row{
-            margin: 0;
-            padding: 0;
+header .div-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .div-header .header_nav .ul-nav{
+    display: flex;
+    justify-content: right;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 1rem;
+    }
+
+    header .header_area{
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    header .div-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header .div-header .header_nav {
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    header .div-header .header_nav .ul-nav{
+        padding: 0.25rem;
+        display: block;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
     }
 }
-
-@media screen and (max-width: 1000px) {
-    .header img{
-        width: 200px;
-        padding-top: 50px;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-        .header_nav{
-            visibility: collapse;
-            margin-bottom: 10px;
-            padding-bottom: 0px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-       .lancamentos-area .main-lancamentos{
-            width: 100%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-        .lancamentos-area .titulos-lancamento{
-            font-size: 40px;
-    }
-}
-
-/*area do header*/
-.header_area{
-    padding: 20px;
-    text-align: center;
-}
-
 
 /*barra de navegação do header*/
-.header_nav{
+header .div-header .header_nav {
+    display: flex;
+    justify-content: center;
     background-color: none;
-    padding: 30px;
-    text-align: right;
-    width: 100%;
 }
-
-.caixa-pesquisa{
-    padding-left: 20px;
-    width: 100%;
-}
-
-
-@media screen and (max-width: 1000px) {
-    .caixa-pesquisa{
-        display: block;
-        align-content: center;
-        text-align: center;
-        visibility: hidden;
-    }
-}
-
-
 
 /*LINKS*/
-.header_nav a{
+.header_nav a {
     color: rgb(196, 176, 146);
     margin-right: 0px;
 }
 
 
 /*link com mouse em cima*/
-.header_nav a:hover{
+.header_nav a:hover {
     color: rgb(131, 103, 58);
     background-color: rgb(207, 178, 135);
     transition: background .4s;
@@ -114,27 +89,14 @@ body{
 
 
 /*link ativo*/
-.active{
+header .header_nav .ul-nav .active {
     background-color: rgb(238, 219, 192) !important;
     color: rgb(105, 81, 41) !important;
 }
 
-
-.botao-procurar{
-    width: 50px;
-    text-align: center;
-}
-
-
-.header_pesquisa .pesquisa{
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    height: 50px;
-}
-
 @media screen and (max-width: 1000px) {
-    input .pesquisa, .caixa-pesquisa{
+    input .pesquisa,
+    .caixa-pesquisa {
         width: 100px;
     }
 }
@@ -176,23 +138,23 @@ body{
 
 
 
+
 /*LANÇAMENTOS*/
-.main{
+.main {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: rgb(16, 48, 51);
-    margin: 0;
-    padding: 0;
 }
 
-
-.area-lancamentos{
-    padding-left: 20%;
-    padding-right: 20%;
-    margin-bottom: 60px;
+.area-lancamentos {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
 }
 
 /*Lançamentos com parágrafos*/
-.main .conteudo-lancamentos p, .elenco, .avaliação{
+.main .conteudo-lancamentos p,
+.elenco,
+.avaliação {
     color: rgb(238, 219, 192);
     font-size: 13px;
 }
@@ -204,13 +166,13 @@ body{
 }
 
 /*Main dos lançamentos para cor ficar dentro do carousel*/
-.main-lancamentos2{
+.main-lancamentos2 {
     background-color: rgb(16, 48, 51) !important;
 }
 
 
 /*Titulo pricnipal da aba lançamentos*/
-.titulos{
+.titulos {
     text-align: center;
     font-size: 55px;
     margin-top: 30px;
@@ -218,27 +180,47 @@ body{
     color: rgb(238, 219, 192);
 }
 
-.titulos-lancamento{
+.titulos-lancamento {
     text-align: center;
     font-size: 55px;
     margin-top: 30px;
     color: rgb(238, 219, 192);
 }
 
+@media screen and (max-width: 1000px) {
+    .lancamentos-area .main-lancamentos {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .lancamentos-area .titulos-lancamento {
+        font-size: 30px;
+    }
+}
 
 /*video do ifrme utilizado*/
-.video-lancamentos{
+.video-lancamentos {
     background-color: rgb(16, 48, 51) !important;
-    margin-bottom: 20px;
     padding: 0px;
-    width: 100%;
+    width: 200px;
     display: flex;
     justify-content: center;
 }
 
+.video-lancamentos iframe{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .video-lancamentos iframe{
+        width: 100%;
+    }
+}
+
 
 /*Conteudo do lançamento*/
-.conteudo-lancamentos{
+.conteudo-lancamentos {
     background-color: rgb(16, 48, 51) !important;
     color: rgb(238, 219, 192);
     margin: 0px;
@@ -248,7 +230,7 @@ body{
 
 
 /*Conteudo do elenco*/
-.elenco{
+.elenco {
     margin-bottom: 15px;
 }
 
@@ -306,168 +288,73 @@ body{
 
 /*DESTAQUES =-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 /*Mudança de cor do background do destaques*/
-.carousel .slide{
+.carousel .slide {
     background-color: rgb(16, 48, 51) !important;
 }
 
 
 /*Area de destaques*/
-.destaques{
+.destaques {
+    justify-content: center;
     background-color: rgb(238, 219, 192) !important;
     color: rgb(22, 63, 67);
 }
 
 
 /*Titulo do destaque*/
-.destaques .titulo-destaques{
+.destaques .titulos {
+    padding: 0;
+    margin: 0;
+}
+
+/*Titulo do destaque*/
+.destaques .titulos h1 {
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+}
+
+/*Titulo do destaque*/
+.destaques .titulo-destaques {
     color: rgb(22, 63, 67);
     text-align: center;
     font-size: 55px;
-    margin-top: 60px;
     width: 100%;
-}
-
-
-/*Menu do destaques posição*/
-.destaques .dp-menu{
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    font-size: 100%;
-    width: 300px;
-    height: 10%;
-    text-align: center;
-}
-
-@media screen and (max-width: 1000px) {
-    .destaques .dp-menu{
-        justify-content: center;
-        align-items: center;
-        padding-left: 40%;
-        margin-top: 0%;
-        text-align: center;
-        font-size: 30px;
-        background-color: none;
-    }
-}
-
-
-/*Menu de categorias lista não ordenada*/
-.dp-menu ul{
-    list-style-type: none;
-    padding: 0px;
-}
-
-
-/*Menu de categorias lista não ordenada*/
-.dp-menu ul{
-    background-color: rgb(207, 178, 135);
-    width: 100%;
-    font-weight: 600; 
-}
-
-@media screen and (max-width: 1000px) {
-    .dp-menu ul{
-        background-color: none;
-        width: 100%;
-        font-weight: 600; 
-    }
-}
-
-
-
-/*itens do menu de categorias lista não ordenada*/
-.dp-menu ul li{
-    display: inline;
-    position: relative;
-    width: 300px;
-    margin: 0px;
-}
-
-
-/*links do Menu de categorias lista não ordenada*/
-.dp-menu ul li a{
-    color: rgb(131, 103, 58);
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    transition: background .4s;
-    width: 300px;
-    margin: 0px;
-}
-
-
-
-/*link do menu de categorias da lista não ordenada com o mouse em cima*/
-.dp-menu ul li a:hover{
-    background-color: blanchedalmond;
-    color: rgb(131, 103, 58);
-    text-decoration: none;
-    padding: 10px;
-}
-
-
-/*Sub Menu categorias*/
-.dp-menu ul ul{
-    display: none;
-    position: absolute;
-}
-
-
-/*links do submenu quando o mouse passar em cima*/
-.dp-menu ul li:hover ul{
-    display: block;
-}
-
-
-/*Setando a aparição dos items do sub menu do categorias*/
-.dp-menu ul ul li{
-    display: inline-block;
-    font-weight: 100;
 }
 
 
 /*Destaques com cartazes (Fundo)*/
-.destaques2{
+.destaques2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: rgb(238, 219, 192);
-    margin: 0;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding: 2rem;
 }
 
-@media screen and (max-width: 1000px) {
-    .destaques2{
-        padding-right: 50px;
-        padding-left: 50px;
-    }
+.destaques2 .cartaz {
+    width: 300px;
+    margin: 2rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px;
+    background-color: var(--verdeSecundario);
 }
-
 
 /*Cartazes do destaque*/
-.destaques2 img{
+.destaques2 .cartaz img {
     width: 100%;
     height: 100%;
-    padding: 0px;
-    margin: 0px;
 }
-
-@media screen and (max-width: 1000px) {
-    .destaques2 .cartaz{
-        padding-bottom: 30px;
-    }
-}
-
-
 
 /*botão ver mais em destaques*/
-.destaques3{
+.destaques3 {
     background-color: rgb(238, 219, 192);
     display: flex;
     justify-content: center;
 }
 
 @media screen and (max-width: 1000px) {
-    .destaques3{
+    .destaques3 {
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -477,32 +364,43 @@ body{
 .destaques3 .botao-ver {
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: end;
 }
 
 
 /*Alterações do botão ver mais destaques*/
-.destaques3 .botao-ver button{
+.destaques3 .botao-ver button {
     color: rgb(238, 219, 192) !important;
     background-color: rgb(22, 63, 67);
-    width: 250px;
-    height: 45px;
-    margin-top: 15px;
-    margin-bottom: 50px;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-bottom: 5rem;
+    border: none;
     border-radius: 5px;
     font-size: 18px;
     font-weight: 400;
 }
 
+.destaques3 .botao-ver a {
+    color: rgb(238, 219, 192) !important;
+    background-color: rgb(22, 63, 67);
+    text-decoration: none;
+}
+
+
 /*Area de avaliação titulo*/
-.destaques4{
-    background-color: rgb(238, 219, 192) !important;
+.main-avaliacoes {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(148, 128, 95);
     color: rgb(22, 63, 67);
 }
 
 
 /*Titulo do avaliação*/
-.destaques4 .titulo-avaliacao{
+.destaques4 .titulo-avaliacao {
     color: rgb(238, 219, 192);
     text-align: center;
     font-size: 55px;
@@ -511,35 +409,64 @@ body{
 }
 
 /*Titulo do destaque 4 - avaliações*/
-.destaques4 .titulos{
-    margin-bottom: 0px;
-    padding: 0px;
+.main-avaliacoes .titulos {
+    width: 100%;
 }
 
 /*Avaliação texto e fotos*/
-.destaques5{
-    background-color: rgb(238, 219, 192);
+.destaques5 {
+    background-color: rgb(148, 128, 95);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 /*todo conteúdo dentro de avaliações*/
-.avaliacao{
-    text-align: center;
-    margin-bottom: 0px;
-    background-color: rgb(148, 128, 95) ;
+.destaques5 .avaliacao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 25rem;
+    padding: 2rem;
+    background-color: rgb(148, 128, 95);
 }
 
+@media screen and (max-width: 500px) {
+    .destaques5 .avaliacao {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 20rem;
+        padding: 2rem;
+        background-color: rgb(148, 128, 95);
+    }
+}
 
 /*Foto da pessoa avaliadora nos destaques*/
-.foto-avaliador{
-    width: 100px;
+.destaques5 .avaliacao .foto-avaliador {
+    width: 80px;
     border-radius: 100%;
 }
 
+/*Foto da pessoa avaliadora nos destaques*/
+.destaques5 .avaliacao .foto-avaliador img{
+    width: 80px;
+    height: 80px;
+}
+
+/*todo conteúdo dentro de avaliações*/
+.destaques5 .avaliacao .avaliacao-conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(148, 128, 95);
+}
+
+
 /*Nome da pessoa da avaliação*/
-.avaliacao h4{
-    display: inline-block;
+.avaliacao h4 {
+    display: inline-flex;
+    flex-wrap: wrap;
     margin-left: 10px;
     color: rgb(238, 219, 192);
     margin-top: 5px;
@@ -547,8 +474,9 @@ body{
 }
 
 /*paragrafos da avaliação dos usuários*/
-.avaliacao-conteudo p{
-    display: block;
+.avaliacao-conteudo p {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     font-size: 12px;
     margin: 5px 25px;
@@ -556,7 +484,7 @@ body{
 }
 
 @media screen and (max-width: 900px) {
-    .avaliacao-conteudo p{
+    .avaliacao-conteudo p {
         padding-left: 10px;
         padding-right: 10px;
         font-size: 15px;
@@ -564,33 +492,22 @@ body{
 }
 
 /*estrlas das avaliações*/
-.estrelas-avaliacao img{
+.estrelas-avaliacao img {
     display: inline;
     width: 20px;
 }
 
 /*caixa das estrelas da avaliação*/
-.estrelas-avaliacao{
+.estrelas-avaliacao {
     margin: auto;
 }
 
 @media screen and (max-width: 1000px) {
-    .estrelas-avaliacao{
+    .estrelas-avaliacao {
         margin-bottom: 50px;
     }
 }
 
-/*caixa principal da avaliação*/
-.detaques-main{
-    background-color: rgb(238, 219, 192);
-}
-
-/*caixa principal main-avaliacoes*/
-.main-avaliacoes{
-    padding-top: 20px;
-    padding-bottom: 80px;
-    background-color: rgb(148, 128, 95);
-}
 
 
 
@@ -647,39 +564,51 @@ body{
 
 
 /*MAIN DO ENTREVISTA E MAKING OF*/
-.entrevista-main{
-    text-align: center;
-    padding: 20px;
+.entrevista-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/*MAIN DO ENTREVISTA E MAKING OF*/
+.entrevista-main .videos-entrevistas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*caixa de videos da entrevista*/
-.videos-entrevistas .video{
-    margin: 0px;
+.entrevista-main .videos-entrevistas .video {
+    padding: 2rem;
+    width: 30rem;
 }
 
-@media screen and (max-width: 1000px) {
-    .videos-entrevistas .video{
-        padding: 50px;
-        height: 100%;
+@media screen and (max-width: 750px) {
+    .entrevista-main .videos-entrevistas .video {
+        padding: 1rem;
+        width: 25rem;
     }
 }
 
-/*iframes das entrevistas*/
-.iframe-entrevista{
-    padding-bottom: 0px;
-    margin: 0px 10px;
+@media screen and (max-width: 400px) {
+    .entrevista-main .videos-entrevistas .video {
+        padding: 1rem;
+        width: 17rem;
+    }
+
 }
 
 /*titulo do video das entrevistas filmes*/
-.titulo-video-entrevista .titulos{
+.titulo-video-entrevista .titulos {
     font-size: 30px;
     margin: 0px 10px;
     padding: 0px;
-    text-align: left; 
+    text-align: left;
 }
 
 /*Paragrafos dos textos das entrevistas*/
-.video .texto-entrevistas p{
+.video .texto-entrevistas p {
     text-align: left;
     margin: 5px 10px;
     color: rgb(220, 200, 150);
@@ -687,132 +616,151 @@ body{
 }
 
 @media screen and (max-width: 1000px) {
-    .video .texto-entrevistas p{
+    .video .texto-entrevistas p {
         font-size: 15px;
     }
 }
 
 /*Links dos textos das entrevistas*/
-.videos-entrevistas a{
+.videos-entrevistas a {
     color: rgb(220, 200, 150);
     margin: 5px 10px;
 }
 
 /*Links dos textos das entrevistas com mouse em cima*/
-.videos-entrevistas a:hover{
+.videos-entrevistas a:hover {
     color: rgb(172, 154, 109);
     margin: 5px 10px;
 }
 
-/*Botão do ver mais entrevistas*/
-.entrevista-main .botao-entrevistas .botao-ver button{
-    color: rgb(22, 63, 67) !important;
-    background-color: rgb(220, 200, 150);
-    width: 250px;
-    height: 45px;
-    margin-top: 15px;
-    margin-bottom: 50px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.entrevista-main .botao-entrevistas .botao-ver{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-
-
-
-.novidades-main{
+/*NOVIDADES*/
+.novidades-main {
     background-color: rgb(207, 178, 135);
-    padding-right: 150px;
-    padding-left: 150px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
 }
 
-@media screen and (max-width: 1000px) {
-        .novidades-main{
-            padding-right: 10px;
-            padding-left: 10px;
-            padding-top: 50px;
-            padding-bottom: 50px;
-    }
+/*NOVIDADES*/
+.novidades {
+    background-color: rgb(207, 178, 135);
+    justify-content: start;
+    width: 100%;
 }
 
-
-
+.novidades-main .novidades .noticias{
+    width: 50rem;
+}
 
 /*novidades main*/
-.novidades-main p{
+.novidades-main .texto-novidades {
+    display: flex;
+    flex-wrap: wrap;
     text-align: left;
-    margin: 5px 10px;
     color: rgb(22, 63, 67);
     font-size: 15px;
-    font-weight: 900px;
+    font-weight: 900;
+    width: 100%;
+    padding: 1rem;
 }
 
 /*titulos do novidades*/
-.titulos-novidades .titulos{
+.novidades .titulos {
+    display: flex;
+    justify-content: start;
     text-align: left;
     color: rgb(22, 63, 67);
     font-weight: bolder;
+    padding: 0;
+    margin: 0;
 }
 
-/*titulo 1 novidades*/
-.titulos-novidades .titulo1 .titulos{
-    margin-left: 10px;
-    margin: 0px;
-    padding: 0px;
+.conteudo-lateral {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-
-/*titulo 2 sobre*/
-.titulos-novidades .titulo2 .titulos{
-    margin-bottom: 10px;
+.novidades-main .conteudo-lateral .div-titulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    width: 100%;
 }
 
+.novidades-main .conteudo-lateral .div-titulo .titulos {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    font-size: 2rem;
+    color: rgb(22, 63, 67);
+}
 
-/*TExto do sobre*/
+.novidades .noticias .card-noticias {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.novidades .noticias .card-noticias .conteudo-novidades{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .novidades .noticias .card-noticias .conteudo-novidades, .texto-novidades, .texto  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.novidades .noticias .card-noticias .conteudo-novidades .imagem {
+    display: flex;
+    width: 20rem;
+}
+.novidades .noticias .card-noticias .conteudo-novidades .imagem img {
+    width: 100%;
+}
+
+.conteudo-lateral .editorial {
+    width: 100%;
+}
+
+/*Texto do sobre*/
 .conteudo-lateral .texto, ul{
-    text-align: left;
+    list-style: none;
+    text-align: right;
     margin-right: 10px;
     color: rgb(22, 63, 67);
     font-size: 15px;
 }
 
-
-.bold{
-    font-weight: 900;
-    font-size: 17px;
-    margin-right: 10px;
-}
-
-.conteudo-lateral .titulos{
-    font-size: 30px;
-    color: rgb(22, 63, 67);
-}
-
-
-.div-redes{
+.conteudo-lateral .redes {
     width: 100%;
-    margin: 0px;
-    padding: 0px;
 }
 
+.conteudo-lateral .redes .conteudo-redes {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 1rem;
+}
 
-.conteudo-redes ul{
-    list-style: none;
-    width: 50px;
+.conteudo-lateral .redes .conteudo-redes .lista-redes {
+    width: 100%;
     display: inline;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-.conteudo-redes ul li{
+.conteudo-redes ul li {
     list-style: none;
     width: 50px;
     display: inline;
@@ -820,7 +768,7 @@ body{
     padding: 0px;
 }
 
-.conteudo-redes ul li img{
+.conteudo-redes ul li img {
     list-style: none;
     width: 10%;
     display: inline;
@@ -828,88 +776,74 @@ body{
     padding: 0px;
 }
 
-@media screen and (max-width: 1000px) {
-    .div-redes{
-        text-align: left;
-        justify-content: left;
-    }
-}
-
-.conteudo-novidades{
-    display: flex;
-    justify-content: left;
-    margin: 10px;
-    align-items: center;
-}
-
-@media screen and (max-width: 1000px) {
-    .conteudo-novidades{
-        display: block;
-        justify-content: left;
-        align-items: center;
-    }
-}
-
-.elemento-novidade-col{
-    display: flex;
-    justify-content: left;
-    margin: 10px;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.conteudo-novidades h4{
+.conteudo-novidades h4 {
     font-size: 26px;
-    margin: 10px 10px 0px 10px;
+    margin: 0;
+    padding: 0;
 }
 
-@media screen and (max-width: 1000px) {
-    .novidades-main, .conteudo-novidades, .titulos{
+@media screen and (max-width: 1150px) {
+    .novidades-main,
+    .novidades{
+        display: flex;
         justify-content: center;
-        align-items: center;
-        text-align: center;
-        display: block;
+        flex-wrap: wrap;
     }
 }
 
-.novidades .conteudo-novidades .imagem img{
-    display: inline;
-    text-align: left;
-    width: 200px;
+@media screen and (max-width: 600px) {
+    .novidades-main,
+    .novidades,
+    .conteudo-novidades,
+    .titulos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 1000px) {
-    .novidades .conteudo-novidades .imagem img{
+    .novidades .conteudo-novidades .imagem{
         width: 100%;
     }
 }
 
 
-.novidades .texto-novidades .texto{
-    text-align: left;
-    width: 90%;
+.novidades .texto-novidades p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
     font-size: 14px;
     font-weight: bold;
 }
 
 @media screen and (max-width: 1000px) {
-    .novidades .texto-novidades{
-        width:100%;
+    .novidades .texto-novidades {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .novidades .texto-novidades {
+        width: 100%;
+        padding: 0;
     }
 }
 
 
 /*Links dos textos das entrevistas*/
-.conteudo-novidades a{
+.conteudo-novidades a {
     color: rgb(22, 63, 67);
     margin: 5px 10px;
 }
 
 /*Links dos textos das entrevistas com mouse em cima*/
-.conteudo-novidades a:hover{
+.conteudo-novidades a:hover {
     color: rgb(172, 154, 109);
     margin: 5px 10px;
 }
+
 /*FIM MAIN ----------------------------------------------------------------------------------------*/
 
 
@@ -935,29 +869,50 @@ body{
 
 
 /*Rodapé-------------------------------------------------------------------------------------------*/
-footer{
-    margin: 0;
-    padding: 0 0 0 0;
-}
 
-.footer{
+footer {
     background-color: rgb(22, 63, 67);
     color: rgb(238, 219, 192);
-    align-items: center;
-    margin: 0px;
-    padding: 50px;
 }
 
-.footer .area-logo{
-    margin-top: 10px;
-    text-align: center;
+footer .div-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
 }
 
-.footer .area-copyright{
-    margin-top: 20px;
-    text-align: center;
+footer .div-footer .div-copyright {
+    padding-top: 1.5rem;
+    text-align: left;
 }
 
-.footer .area-logo .logo img{
-    width:  200px;
+footer .div-footer .div-logo{
+    width: 20rem;
+}
+
+footer .div-footer .div-logo img{
+    width: 100%;
+}
+
+@media screen and (max-width: 1075px) {
+    footer .div-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+    footer .div-footer .div-copyright {
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+    
+    footer .div-footer .div-logo{
+        display: flex;
+        justify-content: center;
+        width: 10rem;
+    }
+    
+    footer .div-footer .div-logo img{
+        width: 100%;
+    }
 }
